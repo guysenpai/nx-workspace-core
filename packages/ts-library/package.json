@@ -1,0 +1,13 @@
+{
+  "name": "@guysenpai/ts-library",
+  "version": "0.0.0-semantic-release",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guysenpai/nx-workspace-core.git",
+    "directory": "packages/ts-library"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
