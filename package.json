@@ -7,6 +7,9 @@
   },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@commitlint/config-nx-scopes": "^16.2.1",
     "@nrwl/cli": "14.1.5",
     "@nrwl/workspace": "14.1.5",
     "husky": "^8.0.0",
