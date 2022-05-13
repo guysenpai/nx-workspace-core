@@ -1,18 +1,22 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@nrwl/cli': 14.1.5
-  '@nrwl/workspace': 14.1.5
-  nx: 14.1.5
-  prettier: ^2.5.1
-  typescript: ~4.6.2
+importers:
 
-devDependencies:
-  '@nrwl/cli': 14.1.5_typescript@4.6.4
-  '@nrwl/workspace': 14.1.5_igyi7w6qm73tfaya7seiivlrqu
-  nx: 14.1.5_typescript@4.6.4
-  prettier: 2.6.2
-  typescript: 4.6.4
+  .:
+    specifiers:
+      '@nrwl/cli': 14.1.5
+      '@nrwl/workspace': 14.1.5
+      husky: ^8.0.0
+      nx: 14.1.5
+      prettier: ^2.5.1
+      typescript: ~4.6.2
+    devDependencies:
+      '@nrwl/cli': 14.1.5_typescript@4.6.4
+      '@nrwl/workspace': 14.1.5_igyi7w6qm73tfaya7seiivlrqu
+      husky: 8.0.1
+      nx: 14.1.5_typescript@4.6.4
+      prettier: 2.6.2
+      typescript: 4.6.4
 
 packages:
 
@@ -1753,6 +1757,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:
