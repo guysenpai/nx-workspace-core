@@ -19,6 +19,7 @@
     "lint-staged": "^12.4.1",
     "nx": "14.1.5",
     "prettier": "^2.5.1",
+    "semantic-release-npm-github-publish": "^1.5.1",
     "semantic-release-plus": "^20.0.0",
     "typescript": "~4.6.2"
   }
