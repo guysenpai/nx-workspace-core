@@ -1,7 +1,7 @@
-import { tsLibrary } from './ts-library';
+import { isNull } from './ts-library';
 
 describe('tsLibrary', () => {
   it('should work', () => {
-    expect(tsLibrary()).toEqual('ts-library');
+    expect(isNull(null)).toEqual(true);
   });
 });
