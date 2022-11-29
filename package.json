@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install"
   },
   "private": true,
   "devDependencies": {
@@ -17,6 +16,7 @@
     "@nrwl/js": "^14.1.5",
     "@nrwl/linter": "14.1.5",
     "@nrwl/workspace": "14.1.5",
+    "@nrwl/devkit": "14.1.5",
     "@swc/cli": "~0.1.55",
     "@swc/core": "~1.2.143",
     "@swc/helpers": "~0.3.3",
