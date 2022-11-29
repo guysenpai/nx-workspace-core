@@ -55,7 +55,7 @@
         "skipProjectChangelog": true,
         "baseBranch": "master",
         "releaseAs": "minor",
-        "commitMessageFormat": "release: bump ${projectName} to ${version} [skip ci]"
+        "commitMessageFormat": "release: publishing ${projectName} with ${version} [skip ci]"
       }
     }
   },
