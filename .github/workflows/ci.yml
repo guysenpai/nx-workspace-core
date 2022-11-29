@@ -117,12 +117,12 @@ jobs:
             npm ci
           fi
 
+#      - run: |
 #          npx nx workspace-lint
 #          npx nx format:check
 #          npx nx affected --target lint --parallel 3
 #          npx nx affected --target test --parallel 3 --ci --code-coverage
-      - run: |
-          npx nx affected --target build
+#          npx nx affected --target build
       - name: Release
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
@@ -130,3 +130,32 @@ jobs:
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx nx affected --target version
+
+#      - name: Setup Git
+#        run: |
+#          git config user.name "GitHub Bot"
+#          git config user.email "gituser@example.com"
+
+#      - name: Version
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+##          GITHUB_TOKEN: ${{ secrets.github_token }}
+##          NODE_AUTH_TOKEN: ${{ inputs.npm_token }}
+#        # Use npx instead of yarn because yarn automagically sets NPM_* environment variables
+#        # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
+#        # which is set up by `setup-node` action.
+#        shell: bash
+#        run: npx nx affected --base=master --target=version
+
+      - name: Tag last-release
+        shell: bash
+        run: git tag -f last-release
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true
+          tags: true
