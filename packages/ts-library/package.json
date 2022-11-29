@@ -2,12 +2,13 @@
   "name": "@dror-weiss/ts-library",
   "version": "0.0.0-semantic-release",
   "type": "commonjs",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/dror-weiss/nx-workspace-core.git",
     "directory": "packages/ts-library"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@dror-weiss:registry": "https://npm.pkg.github.com"
   }
 }
