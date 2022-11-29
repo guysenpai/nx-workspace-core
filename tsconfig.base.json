@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@guysenpai/ts-library": ["packages/ts-library/src/index.ts"]
+      "@dror-weiss/ts-library": ["packages/ts-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,5 +1,4 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/ts-library/src",
   "projectType": "library",
   "targets": {
@@ -46,6 +45,19 @@
       "options": {
         "command": "npx semantic-release-plus --extends ./packages/ts-library/release.config.js",
         "parallel": false
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "outputs": [],
+      "options": {
+        "noVerify": true,
+        "skipCommit": true,
+        "skipRootChangelog": true,
+        "skipProjectChangelog": true,
+        "baseBranch": "master",
+        "releaseAs": "minor",
+        "commitMessageFormat": "release: publishing ${projectName} with ${version} [skip ci]"
       }
     }
   },
