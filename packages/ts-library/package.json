@@ -4,11 +4,10 @@
   "type": "commonjs",
   "private": true,
   "repository": {
-    "type": "git",
     "url": "https://github.com/dror-weiss/nx-workspace-core.git",
     "directory": "packages/ts-library"
   },
   "publishConfig": {
-    "@dror-weiss:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
