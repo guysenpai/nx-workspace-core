@@ -5,5 +5,5 @@
  * @returns `true` if val is null, `false` otherwise.
  */
 export function isNull<T>(val: T | null): val is null {
-  return val === null;
+  return (val === null);
 }
