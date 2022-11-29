@@ -15,5 +15,11 @@
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
+  },
+  "implicitDependencies": {
+    "packages/ts-library/package.json": "*",
+    "packages/ts-library/project.json": "*",
+    "packages/ts-library/release.config.js": "*",
+    "nx.json": "*"
   }
 }

@@ -121,7 +121,7 @@ jobs:
 #          npx nx format:check
 #          npx nx affected --target lint --parallel 3
       - run: |
-          npx nx affected --target test --parallel 3 --ci --code-coverage
+#          npx nx affected --target test --parallel 3 --ci --code-coverage
           npx nx affected --target build --parallel 3
 
       - name: Release
@@ -130,5 +130,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npx nx affected --target publish --all
-#          npx semantic-release-plus
+          npx nx affected --target release --all
+          npx semantic-release-plus
