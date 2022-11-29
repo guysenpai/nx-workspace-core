@@ -129,4 +129,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm nx affected --target version
+          npx nx affected --target version
