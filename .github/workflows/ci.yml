@@ -130,5 +130,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npx nx affected --target release --all
+          npx nx affected --target publish --all
           npx semantic-release-plus
