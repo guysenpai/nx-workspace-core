@@ -122,7 +122,7 @@ jobs:
 #          npx nx affected --target lint --parallel 3
 #          npx nx affected --target test --parallel 3 --ci --code-coverage
       - run: |
-          npx nx affected --target build --parallel 3
+          npx nx affected --target build
 
       - name: Release
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
@@ -131,4 +131,3 @@ jobs:
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx nx affected --target release --all
-          npx semantic-release-plus
