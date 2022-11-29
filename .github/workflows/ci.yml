@@ -118,9 +118,9 @@ jobs:
           fi
 
 #          npx nx workspace-lint
+#          npx nx format:check
       - run: |
-          npx nx format:check
-          npx nx affected --target lint --parallel 3
+#          npx nx affected --target lint --parallel 3
           npx nx affected --target test --parallel 3 --ci --code-coverage
           npx nx affected --target build --parallel 3
 
