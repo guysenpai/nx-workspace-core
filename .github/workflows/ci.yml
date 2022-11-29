@@ -48,7 +48,7 @@ jobs:
           echo "::set-output name=name::$([[ -f ./yarn.lock ]] && echo "yarn" || ([[ -f ./pnpm-lock.yaml ]] && echo "pnpm") || echo "npm")"
 
       - name: Set node/npm/yarn versions using volta
-        uses: volta-cli/action@fdf4cf319494429a105efaa71d0e5ec67f338c6e
+        uses: volta-cli/action@v3
         with:
           node-version: '${{ matrix.node-version }}'
           npm-version: '${{ matrix.npm-version }}'
@@ -117,10 +117,10 @@ jobs:
             npm ci
           fi
 
+#          npx nx workspace-lint
+#          npx nx format:check
+#          npx nx affected --target lint --parallel 3
       - run: |
-          npx nx workspace-lint
-          npx nx format:check
-          npx nx affected --target lint --parallel 3
           npx nx affected --target test --parallel 3 --ci --code-coverage
           npx nx affected --target build --parallel 3
 
