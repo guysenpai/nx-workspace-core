@@ -53,7 +53,7 @@ try {
   writeFileSync(`package.json`, JSON.stringify(json, null, 2));
 } catch (e) {
   console.error(
-    chalk.bold.red(`Error reading package.json file from library build output.`)
+    chalk.bold.red(`Error reading package.json file from package build output.`)
   );
 }
 
