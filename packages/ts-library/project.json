@@ -46,6 +46,17 @@
         "command": "npx semantic-release-plus --extends ./packages/ts-library/release.config.js",
         "parallel": false
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "outputs": [],
+      "options": {
+        "skipRootChangelog": true,
+        "skipProjectChangelog": true,
+        "baseBranch": "master",
+        "releaseAs": "minor",
+        "commitMessageFormat": "release: bump ${projectName} to ${version} [skip ci]"
+      }
     }
   },
   "tags": ["type:util"]

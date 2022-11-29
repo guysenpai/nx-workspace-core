@@ -129,4 +129,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm nx affected --target version --skipRootChangelog --skipProjectChangelog --baseBranch 'master' --releaseAs=minor --commitMessageFormat 'release: bump ${projectName} to ${version} [skip ci]'
+          npm nx affected --target version
