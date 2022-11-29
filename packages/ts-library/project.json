@@ -51,6 +51,8 @@
       "executor": "@jscutlery/semver:version",
       "outputs": [],
       "options": {
+        "noVerify": true,
+        "skipCommit": true,
         "skipRootChangelog": true,
         "skipProjectChangelog": true,
         "baseBranch": "master",
